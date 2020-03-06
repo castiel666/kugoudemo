@@ -30,6 +30,7 @@ export default {
   methods: {
     playAudio (index) {
       const songInfo = this.songList[index]
+      this.$store.commit('isPlay', !this.isPlay)
       this.$store.commit('setListInfo', {
         list: this.songList,
         index: index
